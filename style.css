@@ -75,3 +75,8 @@ body {
     padding-bottom: 30px;
     padding-top: 50px;
 }
+
+.mobile-info {
+    display: none;
+}
+
