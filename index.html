@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>TETRIS</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container" style="padding-top:30px;">
+
+    <h1 class="text-center">T E T R I S</h1>
+
+    <div id="game-box" class="row align-items-center justify-content-center">
+
+        <div class="col-md-4 align-items-center justify-content-center text-left">
+            <div class="info">
+                <h5>Controls:</h5>
+                <p>
+                    <ul>
+                        <li>Down, Left and Right Arrows: Move</li>
+                        <li>Shift or A: Rotate Left</li>
+                        <li>Space or D: Rotate Right</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+        
+        <div class="col-md-4 align-items-center justify-content-center text-center"  style="padding:50px 0;">
+
+            <div class="game-container"> 
+
+                <div class="block"v-for="block in blocks" v-bind:class="{'active': (block.value > 0),'line': (block.value == 1),'square': (block.value == 7),'tblock': (block.value == 2),'sblock': (block.value == 3),'zblock': (block.value == 4),'lblock': (block.value == 5),'jblock': (block.value == 6)}">
+                    
+                </div>
+            
+
+            </div>
+
+                   
+
+        </div>
+
+        <div class="col-md-4 align-self-start text-center">
+            <div class="play-buttons">
+                <button id="new-game" class="btn btn-success" style="margin-right: 3px;">New Game</button><button id="pause" class="btn btn-light" style="margin-left: 3px;">{{ status }}</button>
+            </div>
+            <div class="up-next">
+                <h3>Up Next:</h3>
+                <div class="next-brick">
+                    <div class="block" v-for="block in upNextBlocks" v-bind:class="{'active': (block.value > 0),'line': (block.value == 1),'square': (block.value == 7),'tblock': (block.value == 2),'sblock': (block.value == 3),'zblock': (block.value == 4),'lblock': (block.value == 5),'jblock': (block.value == 6)}">
+                    
+                    </div>
+                </div>
+            </div>
+            <div class="score-board">
+                <h3>Level: {{ level }}</h3>
+                <h3>Lines: {{ popCount }}</h3>
+                <h3>Score: {{ score }}</h3>
+            </div>
+           
+
+        </div>
+
+    </div>
+    
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="script.js"></script>
+<script src="game.js"></script>
+</body>
+</html>

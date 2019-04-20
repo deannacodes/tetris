@@ -1,0 +1,77 @@
+
+body {
+    background: #334768;
+    color: white !important;
+
+}
+
+.game-container {
+    border: 2px solid white;
+    border-top: none;
+    min-height: 608px;
+    background: rgba(0,0,0,0.2);
+    width: 304px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.block {
+    height: 30px;
+    width: 30px;
+    border: 4px solid transparent;
+}
+
+.block.active {
+    
+}
+
+.line {
+    border: 4px outset #4485BA;
+    background: #4485BA;
+}
+
+.square {
+    border: 4px outset #9872B2;
+    background: #9872B2;
+}
+
+.tblock {
+    border: 4px outset  #FFDF99;
+    background: #FFDF99;
+}
+
+.sblock {
+    border: 4px outset  #EF476F;
+    background:  #EF476F;
+}
+
+.zblock {
+    border: 4px outset #F69AB0;
+    background: #F69AB0;
+}
+
+.lblock {
+    border: 4px outset  #8DECD3;
+    background: #8DECD3;
+}
+
+.jblock {
+    border: 4px outset  #06C392;
+    background: #06C392;
+}
+
+.next-brick {
+    background: rgba(255,255,255,0.2);
+    border-top: none;
+    padding: 30px;
+    width: 154px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto 50px;
+}
+
+.play-buttons {
+    padding-bottom: 30px;
+    padding-top: 50px;
+}
