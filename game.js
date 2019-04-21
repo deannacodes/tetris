@@ -491,6 +491,8 @@ var vm = new Vue({
         },
 
         canMove: function(dir, pos = this.activePos) {
+            if (this.status != "Pause")
+                return false
             
             for (let i = 0; i < 4; i++) { 
 
@@ -660,7 +662,7 @@ var vm = new Vue({
                 this.right()
             } else if (key == 40) {
                 this.down()
-            } else if (key == 16 || key == 65) {
+            } else if (key == 16 || key == 65 || key == 38) {
                 this.rotatel()
             } else if (key == 32 || key == 68) {
                 this.rotater()
