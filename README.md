@@ -1,4 +1,4 @@
 # Tetris
 Tetris implementation using vue.js.
 
-Playable demo available at http://sandstonestudio.com/tetris/.
+Playable demo available at http://deanna.codes/tetris/.
